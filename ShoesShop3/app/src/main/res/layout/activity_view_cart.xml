@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.ViewCart"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/product1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Nike Hyperdunk"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/con1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Second-hand - By Adler"
+
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="120$"
+                android:textSize="16dp"></TextView>
+            <TextView
+                android:onClick="remove1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textred"
+                android:text="Remove"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/product2"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoes2">
+
+        </ImageView>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/newname"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Nike Hyperdunk"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/con3"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="New with box - By George"
+
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+
+
+                android:text="165$"
+                android:textSize="16dp"></TextView>
+            <TextView
+                android:onClick="remove2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textred"
+                android:text="remove"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/totalPrice"
+            android:textAlignment="textEnd"
+            android:layout_width="match_parent"
+            android:text="Total: 285$"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/purchase"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/rect"
+            android:text="Purchase now"
+            android:backgroundTint="#54abee"
+            android:onClick="finishShopping"
+            android:textColor="#ffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/continueShopping"
+            android:text="continue shopping"
+            android:layout_width="match_parent"
+            android:background="@drawable/rect"
+            android:textColor="#ffff"
+            android:backgroundTint="#54abee"
+            android:onClick="continueShopping"
+            android:textSize="16dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+
+            app:backgroundTint="#54abee"
+            app:srcCompat="@android:drawable/ic_dialog_email">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

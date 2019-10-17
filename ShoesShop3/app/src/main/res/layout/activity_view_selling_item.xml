@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.ViewSellingItem">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:onClick="onClickItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cond1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="New with box"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/size1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Size: 38.5"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="178$ - By Admin"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:onClick="onClickItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoes2">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cond2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Second-hand"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/size2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Size: 41"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="165$ - By Someone"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:onClick="onClickItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoes1">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cond3"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Second-hand"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/size3"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Size: 46"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price10"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="145$ - By Whom"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickItem"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe2">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cond4"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Second-hand"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/size4"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Size: 41.5"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price4"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="122$ - By IS"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickItem"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cond5"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="New with box"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/size5"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Size: 48"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price12"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="200$ - By WoofWoff"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="#54abee"
+            app:srcCompat="@android:drawable/ic_dialog_email" >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

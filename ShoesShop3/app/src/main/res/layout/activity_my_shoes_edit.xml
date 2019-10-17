@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.MyShoesEdit">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Your description"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="-35dp"
+                    android:layout_marginRight="22dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="22dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Take pictures"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/camera_button"
+                            android:layout_width="83dp"
+                            android:layout_height="50dp"
+
+                            android:background="@drawable/ic_image_black_24dp"
+
+                            />
+                        <ImageView
+                            android:id="@+id/camera_button2"
+                            android:layout_width="83dp"
+                            android:layout_height="50dp"
+
+
+
+                            android:background="@drawable/ic_photo_camera_black_24dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/help"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+
+                        android:background="@drawable/ic_help_black_24dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/imageViewer"
+                    android:layout_marginLeft="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:visibility="visible"
+                    android:id="@+id/click_image"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_camera" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="22dp"
+                    android:text="Price"
+                    android:textSize="17dp" />
+
+
+                <EditText
+                    android:id="@+id/yourBid"
+                    android:layout_width="166dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_marginRight="22dp"
+                    android:ems="10" />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="$" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="editFinish"
+
+                    android:id="@+id/confirm"
+                    android:backgroundTint="#54abee"
+                    android:text="Edit" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="editFinish"
+                    android:id="@+id/delete"
+                    android:backgroundTint="#54abee"
+                    android:text="Delete" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="editFinish"
+                    android:id="@+id/cancel"
+                    android:backgroundTint="#54abee"
+                    android:text="Cancel" />
+
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:backgroundTint="#54abee"
+                app:srcCompat="@android:drawable/ic_dialog_email">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

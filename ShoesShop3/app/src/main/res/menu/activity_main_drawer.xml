@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    tools:context=".MainActivity"
+
+    >
+
+    <group   android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_input_black_24dp"
+
+
+            android:title="@string/menu_login" />
+        <item
+            android:id="@+id/nav_order_management"
+            android:icon="@drawable/ic_bookmark_border_black_24dp"
+
+
+            android:title="@string/menu_order_management" />
+        <item
+            android:id="@+id/nav_my_store"
+            android:icon="@drawable/ic_store_black_24dp"
+            android:visible="false"
+            android:title="@string/menu_my_store" />
+        <item
+            android:id="@+id/nav_history_payment"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="@string/menu_payment_history" />
+
+        <item
+            android:id="@+id/nav_liked"
+            android:icon="@drawable/ic_thumb_up_black_24dp"
+            android:title="@string/menu_liked_shoes" />
+
+
+        <item
+            android:id="@+id/nav_term_policy"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_our_policies" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/menu_setting" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_support"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menu_support" />
+
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_manage_account"
+                android:icon="@drawable/ic_account_circle_black_24dp"
+                android:visible="false"
+                android:title="@string/menu_account_management" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:visible="false"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+</menu>

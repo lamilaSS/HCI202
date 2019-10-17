@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_login"
+    tools:context=".MainActivity"
+    >
+
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.wolfsoft.ui.home.HomeFragment"
+        android:label="@string/menu_login"
+
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.wolfsoft.ui.home.HomeFragment"
+        android:label="@string/menu_logout"
+
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_my_store"
+        android:name="com.example.wolfsoft.ui.home.HomeFragment"
+        android:label="@string/menu_my_store"
+
+        tools:layout="@layout/fragment_login" />
+
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.wolfsoft.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_history_payment"
+        android:name="com.example.wolfsoft.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_payment_history"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_buy_later"
+        android:name="com.example.wolfsoft.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_buy_later"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.wolfsoft.ui.tools.ToolsFragment"
+        android:label="@string/menu_our_policies"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.wolfsoft.ui.share.ShareFragment"
+        android:label="@string/menu_payment_history"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.example.wolfsoft.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_support"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="com.example.wolfsoft.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_liked_shoes"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.wolfsoft.ui.send.SendFragment"
+        android:label="@string/menu_buy_later"
+        tools:layout="@layout/fragment_send" />
+    <fragment
+        android:id="@+id/nav_manage_account"
+        android:name="com.example.wolfsoft.ui.send.SendFragment"
+        android:label="@string/menu_account_management"
+        tools:layout="@layout/fragment_send" />
+</navigation>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.SetItemStatus"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="128dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="Nike Hyperdunk"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/name1"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="Second-hand"
+                android:textSize="20dp"
+                android:id="@+id/con1"
+
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="120$ - By ABC"
+                android:textSize="20dp"
+                android:id="@+id/price1"
+                ></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colordevider"
+        android:padding="16dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload date : 9/10/2019"
+            android:padding="16dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorSub"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 41"
+            android:padding="16dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorSub"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seller Description"
+        android:padding="16dp"
+        android:textSize="13dp"
+        android:textColor="@color/colorSub"
+
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:src="@drawable/shoe1">
+
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Shoes status"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:checkedButton="@id/pass"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/pass"
+                android:buttonTint="#808080"
+                android:text="Pass"
+                android:checked="true"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+            <RadioButton
+                android:id="@+id/fail"
+                android:layout_marginLeft="50dp"
+                android:buttonTint="#808080"
+                android:text="Fail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/free"
+            android:onClick="onClick"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rect"
+            android:text="Cancel"
+            android:textColor="#fff"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/free2"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:onClick="onClick"
+            android:background="@drawable/rect"
+            android:text="Confirm"
+            android:textColor="#fff"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#54abee"
+        app:srcCompat="@android:drawable/ic_dialog_email">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</LinearLayout>

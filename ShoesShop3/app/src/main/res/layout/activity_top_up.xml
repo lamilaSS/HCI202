@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.TopUp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Please choose your payment method: "
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/masterVisa"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <EditText
+            android:hint="Input card number. ex: 1234 5678 90987 6543"
+            android:layout_width="200dp"
+            android:layout_height="100dp"/>
+                <EditText
+                    android:hint="Expiration day. ex: 3/22"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="Input amount of money(x1000). ex: 100"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/creditDebit"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="Input card number. ex: 1234 5678 90987 6543"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"/>
+                <EditText
+                    android:hint="Expiration day. ex: 3/22"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:hint="Input amount of money(x1000). ex: 100"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"/>
+                <Spinner
+                    android:id="@+id/bankList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/phoneCard"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Input card number"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/SMS"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Input phone number"/>
+        </LinearLayout>
+        <RadioGroup
+
+            android:id="@+id/radioButtons"
+            android:checkedButton="@id/masterVisa"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:buttonTint="#808080"
+                android:id="@+id/radioButtonMasterVisa"
+                android:text="Master/Visa"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:buttonTint="#808080"
+                android:id="@+id/radioButtonCreditDebit"
+                android:text="Credit card/Debit card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:buttonTint="#808080"
+                android:id="@+id/radioButtonPhoneCard"
+                android:text="Phone card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:buttonTint="#808080"
+                android:id="@+id/radioButtonSMS"
+                android:text="SMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/continueTopUp"
+                android:text="Confirm"
+                android:backgroundTint="#808080"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rect"
+                android:foregroundGravity="bottom"
+                android:gravity="center"
+                android:padding="16dp"/>
+            <Button
+                android:text="Cancel"
+                android:backgroundTint="#808080"
+                android:id="@+id/cancelTopUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rect"
+                android:foregroundGravity="bottom"
+                android:gravity="center"
+                android:padding="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
