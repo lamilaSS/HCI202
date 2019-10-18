@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.wolfsoft.AddShoesInformation;
 import com.example.wolfsoft.R;
@@ -84,5 +85,12 @@ public class TopUp extends AppCompatActivity {
 
             }
         });
+    }
+    public void topUp(View view){
+        Toast.makeText(getBaseContext(),"Top up complete",Toast.LENGTH_LONG).show();
+    }
+    public void cancel(View view){
+        Toast.makeText(getBaseContext(),"Top up cancel",Toast.LENGTH_LONG).show();
+        finish();
     }
 }

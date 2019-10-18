@@ -1,7 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#808080</item>
+        <item name="colorControlActivated">#FFEB3B</item>
+    </style>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <item name="drawerArrowStyle">@style/DrawerIcon</item>
         <item name="colorPrimary">@color/appbar</item>

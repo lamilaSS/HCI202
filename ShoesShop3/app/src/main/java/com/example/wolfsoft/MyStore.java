@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.example.myapplication.ChatActivity;
 import com.example.myapplication.ListProductChat;
 import com.example.myapplication.MyShoesEdit;
+import com.example.myapplication.ViewBillDetailPending;
+import com.example.myapplication.ViewBillDetailProcessing;
+import com.example.myapplication.ViewBillDetailReject;
 import com.example.myapplication.ViewSellingItem;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tooltip.Tooltip;
@@ -96,4 +99,32 @@ public class MyStore extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showFailBill(View view) {
+        Intent intent = new Intent(MyStore.this, ViewBillDetailReject.class);
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        intent.putExtra("cart","cart");
+        startActivity(intent);
+    }
+    public void showProcessingBill(View view) {
+        Intent intent = new Intent(MyStore.this, ViewBillDetailProcessing.class);
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        intent.putExtra("cart","cart");
+        startActivity(intent);
+    }
+
+    public void showPendingBill(View view) {
+        Intent intent = new Intent(MyStore.this, ViewBillDetailPending.class);
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        intent.putExtra("cart","cart");
+        startActivity(intent);
+    }
 }

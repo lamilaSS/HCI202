@@ -158,7 +158,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:onClick="editFinish"
+                    android:onClick="editDelete"
                     android:id="@+id/delete"
                     android:backgroundTint="#54abee"
                     android:text="Delete" />

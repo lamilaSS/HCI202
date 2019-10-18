@@ -106,7 +106,7 @@
                         android:layout_weight="5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="750 $"
+                        android:text="165 $"
                         android:textSize="21dp"
                         android:textColor="@color/textred"
                         android:textAlignment="center"
@@ -129,11 +129,11 @@
 
                         android:id="@+id/free"
                         android:layout_width="110dp"
-                        android:layout_height="28dp"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/rect"
+                        android:gravity="center"
                         android:text="Free Shipping"
                         android:textColor="#fff"
-                        android:gravity="center"
 
                         />
 
@@ -145,25 +145,19 @@
                         android:orientation="horizontal"
                         >
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:id="@+id/est"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Est. delivery"
-                            android:textSize="13dp"
-                            android:textColor="@color/colorSub"
-                            />
+                        <RatingBar
 
-                        <TextView
-                            android:layout_weight="0.8"
-                            android:id="@+id/date"
-                            android:layout_width="match_parent"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Feb 17-20"
-                            android:textSize="13dp"
-                            android:textColor="@color/colorTex"
-                            />
+
+                            android:backgroundTint="#FFEB3B"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4.5"
+                            android:stepSize="0.5"
+
+                            android:theme="@style/RatingBar" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -301,7 +295,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:text="140$"
+                        android:text="200$"
                         android:textColor="@color/colorTex"
 
                         />
@@ -476,17 +470,22 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     >
-
                     <TextView
-                        android:id="@+id/disc1"
+                        android:layout_width="wrap_content"
+                        android:text="Rating"
+                        android:layout_height="wrap_content"/>
+                    <RatingBar
 
-                        android:layout_width="match_parent"
+                        android:id="@+id/rating1"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Item discription"
-                        android:textColor="@color/colorSub"
-                        android:drawableRight="@drawable/arrow2"
 
-                        />
+                        android:theme="@style/RatingBar"
+                        android:backgroundTint="#FFEB3B"
+                        android:numStars="5"
+
+                        android:stepSize="0.5"
+                        android:isIndicator="false" />
 
                 </LinearLayout>
 
@@ -526,9 +525,9 @@
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tue, Feb 17 - Fri, Feb 18"
+                        android:text="2 to 5 days(you can rearrange if you want)"
                         android:textColor="@color/colorTex"
-                        android:drawableRight="@drawable/arrow2"
+
 
                         />
 
@@ -588,7 +587,7 @@
                         android:layout_height="wrap_content"
                         android:text="No return"
                         android:textColor="@color/colorTex"
-                        android:drawableRight="@drawable/arrow2"
+
 
                         />
 

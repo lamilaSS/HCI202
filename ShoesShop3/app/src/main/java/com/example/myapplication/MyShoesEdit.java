@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -215,4 +217,34 @@ public class MyShoesEdit extends AppCompatActivity {
         finish();
 
     }
+
+    public void editDelete(final View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MyShoesEdit.this);
+
+        builder.setCancelable(true);
+        builder.setTitle("Delete");
+        builder.setMessage("Do you want to delete this sneaker?");
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+                Toast.makeText(getBaseContext(),"Withdraw cancel.",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //change back to home
+                Toast.makeText(getBaseContext(),"Deleted",Toast.LENGTH_SHORT).show();
+                editFinish(view);
+
+            }
+        });
+        builder.show();
+
+
+    }
+
 }

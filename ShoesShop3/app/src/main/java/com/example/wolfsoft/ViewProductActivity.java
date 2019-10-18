@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +59,7 @@ public class ViewProductActivity extends AppCompatActivity implements BaseSlider
 
     private int[] IMAGE = {R.drawable.shoe1, R.drawable.shoe2, R.drawable.p3};
     private String[] TITLE = {"Condition: New", "Condition: 9.5", "Condition: 8.5"};
-    private String[] RATING = {"Size : 4.5 US - by Emma", "Size : 39.5 - by Kelly", "Size : 4.5 US - by Zywoo"};
+    private String[] RATING = {"Size : 39.5  - by Emma", "Size : 39.5 - by Kelly", "Size : 39.5 - by Zywoo"};
     private String[] BY = {"1115$","120$","220$"};
 
     private ImageView like ;
@@ -71,7 +73,22 @@ public class ViewProductActivity extends AppCompatActivity implements BaseSlider
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_product);
         Intent intent = this.getIntent();
+        final RatingBar mRatingBar = findViewById(R.id.rating1);
+        mRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                mRatingBar.setRating(rating);
+            }
+        });
+        mRatingBar.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_UP){
 
+                }
+                return mRatingBar.onTouchEvent(event);
+            }
+        });
 
         login = intent.getBooleanExtra("login" ,false);
         getSupportActionBar().setTitle("Product");

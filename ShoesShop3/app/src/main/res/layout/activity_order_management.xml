@@ -79,7 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Turn down" />
+                android:text="Fail" />
         </LinearLayout>
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -124,7 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:onClick="onClickView"
+        android:onClick="viewBill3"
         >
 
 
@@ -188,7 +188,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="onClickView2"
+        android:onClick="viewBill"
         android:orientation="horizontal">
 
         <ImageView
@@ -256,28 +256,12 @@
         </LinearLayout>
 
     </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="150dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/textred"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="View detail"
-                android:textColor="#3F51B5"
-                android:onClick="viewBill"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="onClickView"
+        android:onClick="viewBill4"
         android:orientation="horizontal">
 
         <ImageView
@@ -336,11 +320,12 @@
         </LinearLayout>
 
     </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="onClickView"
+            android:onClick="viewBill2"
             android:orientation="horizontal">
 
             <ImageView
@@ -394,11 +379,12 @@
                     android:layout_marginTop="10dp"
 
                     android:layout_marginBottom="20dp"
-                    android:text="You receipt: 165$"
+                    android:text="166$-By Loyld"
                     android:textSize="20dp"></TextView>
             </LinearLayout>
 
         </LinearLayout>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"

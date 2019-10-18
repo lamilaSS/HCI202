@@ -17,57 +17,77 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="24dp"
-
-                android:src="@drawable/ic_passed"
-                android:layout_height="24dp"/>
-            <TextView
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:text="pass"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="24dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
 
-                android:src="@drawable/ic_failed"
-                android:layout_height="24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="fail"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="24dp"
+                    android:src="@drawable/ic_processing"
+                    android:layout_height="24dp"/>
 
-                android:src="@drawable/ic_pending"
-                android:layout_height="24dp"/>
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Processing" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:text="pending"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/ic_failed"
+                    android:layout_height="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fail" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/ic_pending"
+                    android:layout_height="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="pending"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/market"
+                    android:layout_height="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="On market"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </HorizontalScrollView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -79,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
+        android:onClick="showProcessingBill"
         >
 
 
@@ -127,12 +147,12 @@
 
             <ImageView
                 android:id="@+id/imageView18"
-                android:layout_width="20dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="-104dp"
                 android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/ic_failed" />
+                app:srcCompat="@drawable/ic_processing" />
 
         </LinearLayout>
 
@@ -143,7 +163,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-
+        android:onClick="showFailBill"
         android:orientation="horizontal">
 
         <ImageView
@@ -196,7 +216,7 @@
                 android:layout_gravity="right"
                 android:layout_marginTop="-100dp"
                 android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/ic_passed" />
+                app:srcCompat="@drawable/ic_failed" />
 
         </LinearLayout>
 
@@ -206,7 +226,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="onClickView"
+        android:onClick="showPendingBill"
         android:orientation="horizontal">
 
         <ImageView
@@ -278,7 +298,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/item1">
+            android:src="@drawable/item8">
 
         </ImageView>
 
@@ -293,11 +313,11 @@
                 android:layout_height="42dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Some shoes"
+                android:text="XYZ shoes"
                 android:textSize="20dp"></TextView>
 
             <TextView
-                android:id="@+id/con7"
+
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginLeft="10dp"
@@ -308,15 +328,15 @@
 
             <ImageView
 
-                android:layout_width="30dp"
-                android:layout_height="25dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="-45dp"
                 android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/ic_processing" />
+                app:srcCompat="@drawable/market" />
 
             <TextView
-                android:id="@+id/price7"
+
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginLeft="10dp"
@@ -328,6 +348,33 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="50dp"
+
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#54abee"
+        app:srcCompat="@android:drawable/ic_dialog_email">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_gravity="bottom|end"
+
+        android:layout_height="wrap_content"></LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#54abee"
+        android:onClick="addShoesToSell"
+        android:text="Add to sell" />
 </LinearLayout>
     </ScrollView>
 

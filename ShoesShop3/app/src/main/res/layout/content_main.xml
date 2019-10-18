@@ -429,13 +429,7 @@
                 android:columnWidth="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
-            <TextView
-                android:text="See more >"
-                android:alpha="0.5"
-                android:textAlignment="center"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+
 
             <ProgressBar
                 android:layout_width="wrap_content"

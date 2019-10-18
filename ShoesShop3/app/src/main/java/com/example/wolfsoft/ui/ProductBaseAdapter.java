@@ -83,15 +83,18 @@ public class ProductBaseAdapter extends BaseAdapter {
 
         Log.d("CHECK21", "getView: " +getCount());
         viewHolder.image.setImageResource(items[autoGenerate(0,items.length-1)]);
-
+        viewHolder.image.setScaleType(ImageView.ScaleType.FIT_XY);
         viewHolder.name.setText("Shoes ABC");
         viewHolder.price.setText("Start with: 3000$");
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                200, 80);
+                200, 50);
         layoutParams.setMargins(50,0,0,0);
-        viewHolder.image.setLayoutParams(new LinearLayout.LayoutParams(
-                200,
-                100));
+        LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(150,150);
+        layoutParams1.setMargins(50,10,0,0);
+        viewHolder.image.setLayoutParams(layoutParams1);
+        viewHolder.name.setTextSize(12);
+        viewHolder.price.setTextSize(10);
+
         viewHolder.name.setLayoutParams(layoutParams);
         viewHolder.price.setLayoutParams(layoutParams);
 

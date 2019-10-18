@@ -55,6 +55,7 @@ public class GetSavedShippingInfo extends AppCompatActivity implements View.OnCl
                         startActivity(in);
                         finish();
                         break;
+                    case R.id.shoesMarketWallet:
                     case R.id.delivery:
 
                         in = new Intent(this, PaymentFinish.class);
@@ -69,7 +70,7 @@ public class GetSavedShippingInfo extends AppCompatActivity implements View.OnCl
                 Intent in = new Intent(this,getShippingInfo.class);
                 in.putExtra("login",login);
                 startActivity(in);
-                finish();
+
                 break;
             default:
 

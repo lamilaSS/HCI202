@@ -99,4 +99,32 @@ public class OrderManagement extends AppCompatActivity {
         intent.putExtra("orders","orders");
         startActivity(intent);
     }
+    public void viewBill2(View view){
+        Intent intent = new Intent(OrderManagement.this, ViewBillDetailProcessing.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+
+        intent.putExtra("login",login);
+        startActivity(intent);
+    }
+    public void viewBill3(View view){
+        Intent intent = new Intent(OrderManagement.this, ViewBillDetailReject.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+    }
+    public void viewBill4(View view){
+        Intent intent = new Intent(OrderManagement.this, ViewBillDetailPending.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+    }
 }

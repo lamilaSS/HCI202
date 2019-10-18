@@ -12,6 +12,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.example.myapplication.AccountManagement;
 import com.example.myapplication.AdminManageChat;
 import com.example.myapplication.AdminViewBill;
+import com.example.myapplication.BuyHistory;
 import com.example.myapplication.ChatActivity;
 
 import com.example.myapplication.CheckUploadedItem;
@@ -92,7 +93,9 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
     private  int[] ints= new int[]{R.drawable.comercial1,R.drawable.comercial2,R.drawable.comercial3};
     private  int[] items  = new int[]{R.drawable.item1,R.drawable.item2,R.drawable.item3,R.drawable.item4,R.drawable.item5,
             R.drawable.item6,R.drawable.item7
-    ,R.drawable.item8,R.drawable.item9,R.drawable.item10};
+    ,R.drawable.item8,R.drawable.item9,R.drawable.item10,R.drawable.item11,R.drawable.item12,R.drawable.item13,R.drawable.item14,R.drawable.item15,
+            R.drawable.item16,R.drawable.item17,R.drawable.item18,R.drawable.item19,R.drawable.item20,R.drawable.item21,R.drawable.item22
+            ,R.drawable.item23,R.drawable.item24,R.drawable.item25,R.drawable.item26,R.drawable.item27,R.drawable.item28};
     private String[] brandList = new String[]{"Addidas","Nike","Supreme","Polo","Puma"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -223,15 +226,19 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             TextView name = new TextView(this);
             TextView price = new TextView(this);
             imageView.setImageResource(items[autoGenerate(0,items.length-1)]);
-            imageView.setScaleType(ImageView.ScaleType.FIT_START);
-            name.setText("ABC Shoes");
-            price.setText("Start with 300$");
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            String alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            String alphabet1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            name.setText( "Shoes " + ++i);
+            i--;
+
+            price.setText("Start with " + new Random().nextInt(8 + 1) + 10 + "$");
             imageView.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    100));
+                    150));
             name.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    70));
+                    50));
 
             price.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
@@ -244,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             price.setTextSize(12);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(50,20,0,0);
+            layoutParams.setMargins(50,10,0,0);
             product.setLayoutParams(layoutParams);
 
             youMayLikeLayout.addView(product);
@@ -265,18 +272,22 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             TextView name3 = new TextView(this);
             TextView price3 = new TextView(this);
             imageView3.setImageResource(items[autoGenerate(0,items.length-1)]);
-            name3.setText("ABC Shoes");
-            price3.setText("Start with 300$");
+            String alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            String alphabet1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            name3.setText( "Shoes " + ++i);
+            i--;
+
+            price3.setText("Start with " + new Random().nextInt(8 + 1) + 10 + "$");
             imageView3.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    100));
+                    150));
             name3.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    70));
+                    50));
             price3.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
                     70));
-            imageView3.setScaleType(ImageView.ScaleType.FIT_START);
+            imageView3.setScaleType(ImageView.ScaleType.FIT_XY);
             product3.setOrientation(LinearLayout.VERTICAL);
             product3.addView(imageView3);
             product3.addView(name3);
@@ -284,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
 
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(50,20,0,0);
+            layoutParams.setMargins(50,10,0,0);
             product3.setLayoutParams(layoutParams);
             name3.setTextSize(14);
             price3.setTextSize(12);
@@ -307,14 +318,18 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             TextView name2 = new TextView(this);
             TextView price2 = new TextView(this);
             imageView2.setImageResource(items[autoGenerate(0,items.length-1)]);
-            name2.setText("ABC Shoes");
-            price2.setText("Start with 300$");
+            String alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            String alphabet1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            name2.setText( "Shoes " + ++i);
+            i--;
+
+            price2.setText("Start with " + new Random().nextInt(8 + 1) + 10 + "$");
             imageView2.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    100));
+                    150));
             name2.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    70));
+                    50));
             price2.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
                     70));
@@ -322,10 +337,10 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             product2.addView(imageView2);
             product2.addView(name2);
             product2.addView(price2);
-            imageView2.setScaleType(ImageView.ScaleType.FIT_START);
+            imageView2.setScaleType(ImageView.ScaleType.FIT_XY);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(50,20,0,0);
+            layoutParams.setMargins(50,10,0,0);
             product2.setLayoutParams(layoutParams);
             name2.setTextSize(14);
             price2.setTextSize(12);
@@ -349,14 +364,18 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             TextView name4 = new TextView(this);
             TextView price4 = new TextView(this);
             imageView4.setImageResource(items[autoGenerate(0,items.length-1)]);
-            name4.setText("ABC Shoes");
-            price4.setText("Start with 300$");
+            String alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            String alphabet1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            name4.setText( "Shoes " + ++i);
+            i--;
+
+            price4.setText("Start with " + new Random().nextInt(8 + 1) + 10 + "$");
             imageView4.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    100));
+                    150));
             name4.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    70));
+                    50));
             price4.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
                     70));
@@ -364,10 +383,10 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             product4.addView(imageView4);
             product4.addView(name4);
             product4.addView(price4);
-            imageView4.setScaleType(ImageView.ScaleType.FIT_START);
+            imageView4.setScaleType(ImageView.ScaleType.FIT_XY);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(50,20,0,0);
+            layoutParams.setMargins(50,10,0,0);
             product4.setLayoutParams(layoutParams);
             name4.setTextSize(14);
             price4.setTextSize(12);
@@ -412,14 +431,18 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             TextView name1 = new TextView(this);
             TextView price1 = new TextView(this);
             imageView1.setImageResource(items[autoGenerate(0,items.length-1)]);
-            name1.setText("ABC Shoes");
-            price1.setText("Start with 300$");
+            String alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            String alphabet1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            name1.setText( "Shoes " + ++i);
+            i--;
+
+            price1.setText("Start with " + new Random().nextInt(8 + 1) + 10 + "$");
             imageView1.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    100));
+                    150));
             name1.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
-                    70));
+                    50));
             price1.setLayoutParams(new LinearLayout.LayoutParams(
                     200,
                     70));
@@ -431,9 +454,9 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
             price1.setTextSize(12);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(50,20,0,0);
+            layoutParams.setMargins(50,10,0,0);
             product1.setLayoutParams(layoutParams);
-            imageView1.setScaleType(ImageView.ScaleType.FIT_START);
+            imageView1.setScaleType(ImageView.ScaleType.FIT_XY);
 
             newRelease.addView(product1);
             product1.setOnClickListener(new View.OnClickListener() {
@@ -590,11 +613,21 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
                         startActivity(intent2);
                         break;
                     case R.id.nav_history_payment:
-                        intent3.putExtra("name","History buy/sell");
-                        intent3.putExtra("login", login);
-                        intent3.putExtra("cart","cart");
-                        intent3.putExtra("showMore", "4");
-                        startActivity(intent3);
+                        if(login == false){
+                            Intent intent10 = new Intent(MainActivity.this, BuyHistory.class);
+                            intent10.putExtra("name","History buy/sell");
+                            intent10.putExtra("login", login);
+                            intent10.putExtra("cart","cart");
+                            intent10.putExtra("showMore", "4");
+                            startActivity(intent10);
+                        }else {
+                            intent3.putExtra("name","History buy/sell");
+                            intent3.putExtra("login", login);
+                            intent3.putExtra("cart","cart");
+                            intent3.putExtra("showMore", "4");
+                            startActivity(intent3);
+                        }
+
                         break;
                     case R.id.nav_liked:
                         Intent intent4 = new Intent(MainActivity.this,SearchResult.class);

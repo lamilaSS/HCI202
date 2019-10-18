@@ -17,7 +17,13 @@ public class getShippingInfo extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_shipping_info);
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+
+            setContentView(R.layout.activity_get_shipping_info);
+
+
         getSupportActionBar().setTitle("Payment information");
         Button continuePayment = (Button) findViewById(R.id.continuepayment);
         continuePayment.setOnClickListener(this);

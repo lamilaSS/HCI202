@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.myapplication.ViewBillDetailReject"></activity>
+        <activity android:name="com.example.myapplication.ViewBillDetailPending"></activity>
+        <activity android:name="com.example.myapplication.HistorySell" />
+        <activity android:name="com.example.myapplication.BuyHistory" />
+        <activity android:name="com.example.myapplication.ViewBillDetailReject" />
         <activity android:name="com.example.myapplication.ViewBillDetailProcessing" />
         <activity android:name="com.example.myapplication.AdminManageChat" />
         <activity android:name="com.example.myapplication.ChatForAdmin" />

@@ -53,17 +53,30 @@ public class ViewCart extends AppCompatActivity {
     public void finishShopping(View view){
         LinearLayout linearLayout1 = findViewById(R.id.product1);
         LinearLayout linearLayout2 = findViewById(R.id.product2);
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
         if(linearLayout1.getVisibility() == View.GONE && linearLayout2.getVisibility() == View.GONE){
             Toast.makeText(getBaseContext(),"Sorry your cart is empty!",Toast.LENGTH_LONG).show();
         }else{
-            Intent intent = new Intent(this,getShippingInfo.class);
-            Intent intent1 = this.getIntent();
+            if(login == false){
+                Intent intent = new Intent(this,getShippingInfo.class);
 
-            final boolean login = intent1.getBooleanExtra("login" ,false);
-            intent.putExtra("login",login);
-            startActivity(intent);
 
-            finish();
+                intent.putExtra("login",login);
+                startActivity(intent);
+
+                finish();
+            }else{
+                Intent intent = new Intent(this,GetSavedShippingInfo.class);
+
+
+                intent.putExtra("login",login);
+                startActivity(intent);
+
+                finish();
+            }
+
         }
 
     }
@@ -88,7 +101,7 @@ public class ViewCart extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-                Toast.makeText(getBaseContext(),"Withdraw cancel.",Toast.LENGTH_LONG).show();
+
             }
         });
 

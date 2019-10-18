@@ -51,7 +51,7 @@ public class AccountManagement extends AppCompatActivity {
         finish();
     }
     public void topUp(View view){
-        Intent intent = new Intent(AccountManagement.this,GetSavedPaymentInfo.class);
+        Intent intent = new Intent(AccountManagement.this,TopUp.class);
         startActivity(intent);
     }
     public void moneyWithdraw(View view){

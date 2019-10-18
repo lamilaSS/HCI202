@@ -95,4 +95,42 @@ public class ViewSellingItem extends AppCompatActivity {
         intent.putExtra("login",login);
         startActivity(intent);
     }
+    public void viewBill2(View view){
+        Intent intent = new Intent(ViewSellingItem.this, ViewBillDetail.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+    }
+    public void viewBill3(View view){
+        Intent intent = new Intent(ViewSellingItem.this, ViewBillDetail.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+    }
+    public void historyBuy(View view){
+        Intent intent = new Intent(ViewSellingItem.this, BuyHistory.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+        finish();
+    }
+    public void historySell(View view){
+        Intent intent = new Intent(ViewSellingItem.this, HistorySell.class);
+
+        Intent intent1 = this.getIntent();
+
+        final boolean login = intent1.getBooleanExtra("login" ,false);
+        intent.putExtra("login",login);
+        startActivity(intent);
+        finish();
+    }
 }
