@@ -98,6 +98,133 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickView"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/item8">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="XYZ shoes"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-7dp"
+
+                android:text="New with box"
+                android:textSize="20dp"></TextView>
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/market" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginBottom="20dp"
+                android:text="You receipt: 165$"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/waitingForUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickView"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:src="@drawable/item11">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="ZZZ shoes"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-7dp"
+
+                android:text="New with box"
+                android:textSize="20dp"></TextView>
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/ic_schedule_black_24dp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginBottom="20dp"
+                android:text="You receipt: 165$"
+                android:textSize="20dp"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:onClick="showProcessingBill"
         >
@@ -159,68 +286,7 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="showFailBill"
-        android:orientation="horizontal">
 
-        <ImageView
-
-            android:layout_width="100dp"
-            android:layout_height="128dp"
-            android:layout_marginTop="0dp"
-            android:orientation="vertical"
-            android:src="@drawable/shoes2">
-
-        </ImageView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="128dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/newname"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="ABC Shoes"
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/con3"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:text="New with box"
-
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/price2"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="20dp"
-
-                android:text="You receipt: 165$"
-                android:textSize="20dp"></TextView>
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="-100dp"
-                android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/ic_failed" />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -289,7 +355,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="onClickView"
+        android:onClick="showFailBill"
         android:orientation="horizontal">
 
         <ImageView
@@ -298,7 +364,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/item8">
+            android:src="@drawable/shoes2">
 
         </ImageView>
 
@@ -308,43 +374,42 @@
             android:orientation="vertical">
 
             <TextView
-
+                android:id="@+id/newname"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="XYZ shoes"
+                android:text="ABC Shoes"
                 android:textSize="20dp"></TextView>
 
             <TextView
-
+                android:id="@+id/con3"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="-7dp"
-
                 android:text="New with box"
+
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="You receipt: 165$"
                 android:textSize="20dp"></TextView>
 
             <ImageView
-
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:id="@+id/imageView17"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="right"
-                android:layout_marginTop="-45dp"
+                android:layout_marginTop="-100dp"
                 android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/market" />
+                app:srcCompat="@drawable/ic_failed" />
 
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-
-                android:layout_marginBottom="20dp"
-                android:text="You receipt: 165$"
-                android:textSize="20dp"></TextView>
         </LinearLayout>
 
     </LinearLayout>

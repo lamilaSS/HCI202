@@ -7,12 +7,12 @@ import android.view.View;
 
 import com.example.wolfsoft.R;
 
-public class ViewBillDetailProcessing extends AppCompatActivity {
+public class ViewBillDetailProcessing2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_bill_detail_processing);
+        setContentView(R.layout.activity_view_bill_detail_processing2);
         getSupportActionBar().setTitle("Order detail");
     }
     public void finishSee(View view){

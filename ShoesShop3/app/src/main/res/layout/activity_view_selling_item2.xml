@@ -27,7 +27,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/shoe1">
+            android:src="@drawable/hyperdunk1">
 
         </ImageView>
 
@@ -81,7 +81,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/shoe1">
+            android:src="@drawable/hyperdunk4">
 
         </ImageView>
 
@@ -136,7 +136,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/shoe1">
+            android:src="@drawable/hyperdunk6">
 
         </ImageView>
 
@@ -190,7 +190,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/shoe1">
+            android:src="@drawable/hyperdunk7">
 
         </ImageView>
 
@@ -244,7 +244,7 @@
             android:layout_height="128dp"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:src="@drawable/shoe1">
+            android:src="@drawable/hyperdunk8">
 
         </ImageView>
 

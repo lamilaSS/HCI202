@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="100dp"
-                        android:text="Take pictures"
+                        android:text="Pictures"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"/>
                     <TextView

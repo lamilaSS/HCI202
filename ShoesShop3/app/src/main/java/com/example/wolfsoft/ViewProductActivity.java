@@ -57,14 +57,14 @@ public class ViewProductActivity extends AppCompatActivity implements BaseSlider
     private GridviewAdapter gridviewAdapter;
 
 
-    private int[] IMAGE = {R.drawable.shoe1, R.drawable.shoe2, R.drawable.p3};
+    private int[] IMAGE = {R.drawable.hyperdunk9, R.drawable.shoe2, R.drawable.p3};
     private String[] TITLE = {"Condition: New", "Condition: 9.5", "Condition: 8.5"};
     private String[] RATING = {"Size : 39.5  - by Emma", "Size : 39.5 - by Kelly", "Size : 39.5 - by Zywoo"};
     private String[] BY = {"1115$","120$","220$"};
 
     private ImageView like ;
     private int[] IMAGEgrid = {R.drawable.shoes1, R.drawable.shoes2, R.drawable.shoes1, R.drawable.shoes1};
-    private String[] TITLeGgrid = {"ABC shoes-Start with 150$", "ABC shoes-Start with 150$", "ABC shoes-Start with 150$",  "ABC shoes-Start with 150$"};
+    private String[] TITLeGgrid = {"ABC shoes-Start with 150$", "XYZ shoes-Start with 80$", "NMD shoes-Start with 100$",  "DEF shoes-Start with 250$"};
     private String[] DIscriptiongrid = {"Wrist Watches", "Belts", "Sunglasses","Perfumes"};
     private String[] Dategrid = {"Explore Now!","Grab Now!","Discover now!", "Great Savings!"};
     boolean login = false;
@@ -73,22 +73,8 @@ public class ViewProductActivity extends AppCompatActivity implements BaseSlider
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_product);
         Intent intent = this.getIntent();
-        final RatingBar mRatingBar = findViewById(R.id.rating1);
-        mRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                mRatingBar.setRating(rating);
-            }
-        });
-        mRatingBar.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_UP){
 
-                }
-                return mRatingBar.onTouchEvent(event);
-            }
-        });
+
 
         login = intent.getBooleanExtra("login" ,false);
         getSupportActionBar().setTitle("Product");
@@ -244,18 +230,7 @@ public class ViewProductActivity extends AppCompatActivity implements BaseSlider
 
             }
         });
-        final Button size = findViewById(R.id.sizeChoose);
-        size.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ViewProductActivity.this,SizeChoosingActivity.class);
-                Intent intent1 =ViewProductActivity.this.getIntent();
 
-                final boolean login = intent1.getBooleanExtra("login" ,false);
-                intent.putExtra("login",login);
-                startActivityForResult(intent,size_id);
-            }
-        });
     }
 
     @Override

@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.wolfsoft.R;
@@ -16,6 +18,15 @@ public class ViewBillDetailPending extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_bill_detail_pending);
+        getSupportActionBar().setTitle("Order detail");
+        Intent intent = this.getIntent();
+
+        if(intent.getStringExtra("seller") != null && intent.getStringExtra("seller").equals("seller") ){
+            Button cancel = findViewById(R.id.cancelOrder);
+            cancel.setVisibility(View.GONE);
+        }else {
+
+        }
     }
     public void finishSee(View view){
         finish();

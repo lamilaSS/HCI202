@@ -95,90 +95,59 @@
                     android:textSize="20dp"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"/>
-                <LinearLayout
+
+
+                <TextView
+
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp">
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:background="@drawable/ic_local_phone_black_24dp"
-                        android:layout_height="30dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Shipping To"
+                    android:textSize="20dp" />
 
-                        android:text=" : 090978564321"
-                        android:textColor="@color/colorTex"
-                        android:textSize="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:text="Email : phu123@gmail.ocm"
-                    android:textColor="@color/colorTex"
-                    android:textSize="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@color/colorTex"
-                    android:text="Address : 10/12 ASD street d.10 w.13"
-                    android:textSize="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:textSize="20dp"
-                    android:textColor="#000"
-                    android:layout_width="match_parent"
-                    android:text="Buyer information"
-                    android:layout_height="wrap_content"/>
                 <TextView
 
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Username : Bill Gate"
                     android:textColor="@color/colorTex"
-                    android:textSize="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
+
+                    android:textSize="20dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
                     <ImageView
-                        android:layout_width="30dp"
-                        android:background="@drawable/ic_local_phone_black_24dp"
-                        android:layout_height="30dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/ic_local_phone_black_24dp">
+
+
+                    </ImageView>
+
                     <TextView
+
                         android:layout_width="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:text=" : 0909787878321"
+                        android:layout_height="wrap_content"
+                        android:text="02343443234"
                         android:textColor="@color/colorTex"
-                        android:textSize="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="20dp" />
+
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Email : phu@gmail.ocm"
-                    android:textSize="20dp"
+                    android:text="Address: 285/A Heritage Hill - LA"
                     android:textColor="@color/colorTex"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:text="Address : 10/12 BDR street d.10 w.13"
-                    android:textSize="20dp"
-                    android:textColor="@color/colorTex"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
+
+                    android:textSize="20dp" />
+
                 <TextView
 
                     android:layout_width="match_parent"
@@ -186,7 +155,8 @@
                     android:text="Payment information "
                     android:textSize="20dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -246,6 +216,8 @@
                         android:onClick="finishSee"
                         android:text="finish" />
                     <Button
+                        android:id="@+id/cancelOrder"
+                        android:visibility="visible"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#5DADE2"

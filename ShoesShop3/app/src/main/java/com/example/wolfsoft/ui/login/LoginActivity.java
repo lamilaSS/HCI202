@@ -90,13 +90,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-                Log.d("CHECK40", "onChanged: "+usernameEditText.getText());
-                if(usernameEditText.getText().toString().equals("admin")){
+
+                if(usernameEditText.getText().toString().equals("adminCheck")){
                     setResult(2);
-                }else if(usernameEditText.getText().toString().equals("admin2")){
+                }else if(usernameEditText.getText().toString().equals("adminOrder")){
                     setResult(3);
-                }else if(usernameEditText.getText().toString().equals("3")){
+                }else if(usernameEditText.getText().toString().equals("adminChat")){
                     setResult(4);
+                }else if(usernameEditText.getText().toString().equals("adminNameAndBrand")){
+                    setResult(6);
                 }else{
                     setResult(1);
                 }

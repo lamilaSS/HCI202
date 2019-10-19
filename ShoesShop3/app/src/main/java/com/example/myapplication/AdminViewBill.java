@@ -35,7 +35,7 @@ public class AdminViewBill extends AppCompatActivity {
         });
     }
     public void viewBill(View view){
-        Intent intent = new Intent(AdminViewBill.this, ViewBillDetail.class);
+        Intent intent = new Intent(AdminViewBill.this, ViewBillDetailProcessing.class);
 
         intent.putExtra("orders","orders");
         intent.putExtra("admin","admin");

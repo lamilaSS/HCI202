@@ -3,46 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="20dp"
     android:layout_height="match_parent"
-    tools:context="com.example.myapplication.MyShoesEdit">
+    tools:context="com.example.myapplication.AddBrand">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="22dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Your description"
+                    android:text="Shoes name"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textColor="@color/textred"
+                    android:text="*"
                     android:textSize="17dp" />
 
                 <EditText
-                    android:id="@+id/editText"
-                    android:text="Good shoes for running"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="22dp"
-                    android:layout_marginTop="-35dp"
-                    android:layout_marginRight="22dp"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine" />
+
+                    android:layout_width="166dp"
+                    android:layout_height="50dp"
+                    />
+
+
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="22dp"
+                    android:text="Date established :"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textColor="@color/textred"
+                    android:text="*"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:text=""
+                    android:layout_width="166dp"
+                    android:layout_height="50dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,11 +82,17 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="100dp"
-                        android:text="Take pictures"
+                        android:text="Logo"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
 
-
+                        android:textColor="@color/textred"
+                        android:textSize="17dp" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:orientation="horizontal"
@@ -84,9 +117,9 @@
 
                     <ImageView
                         android:id="@+id/help"
-                        android:layout_marginTop="20dp"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
 
 
                         android:background="@drawable/ic_help_black_24dp" />
@@ -104,7 +137,7 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:id="@+id/click_image"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
@@ -113,34 +146,32 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="22dp"
-                    android:text="Price"
+                    android:layout_marginTop="20dp"
+                    android:text="Your description"
                     android:textSize="17dp" />
 
-
                 <EditText
-                    android:id="@+id/yourBid"
-                    android:layout_width="166dp"
-                    android:layout_height="50dp"
-                    android:text="150"
-                    android:layout_marginLeft="-15dp"
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="-35dp"
                     android:layout_marginRight="22dp"
-                    android:ems="10" />
-
-                <TextView
-                    android:textSize="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:text="$" />
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
             </LinearLayout>
-
 
 
             <LinearLayout
@@ -149,26 +180,18 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:onClick="editFinish"
-
                     android:id="@+id/confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:backgroundTint="#54abee"
-                    android:text="Edit" />
+                    android:onClick="click"
+                    android:text="Confirm" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:onClick="editDelete"
-                    android:id="@+id/delete"
-                    android:backgroundTint="#54abee"
-                    android:text="Delete" />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:onClick="editFinish"
                     android:id="@+id/cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="click"
                     android:backgroundTint="#54abee"
                     android:text="Cancel" />
 
@@ -184,10 +207,5 @@
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
         </LinearLayout>
-
     </ScrollView>
-
-
-
-
 </LinearLayout>

@@ -2,6 +2,8 @@ package com.example.wolfsoft;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 
@@ -10,6 +12,7 @@ import android.os.Bundle;
 
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.example.myapplication.AccountManagement;
+import com.example.myapplication.AdminAddBrandAndShoesName;
 import com.example.myapplication.AdminManageChat;
 import com.example.myapplication.AdminViewBill;
 import com.example.myapplication.BuyHistory;
@@ -21,9 +24,11 @@ import com.example.myapplication.OrderManagement;
 import com.example.myapplication.SearchResult;
 import com.example.myapplication.SupportActivity;
 import com.example.myapplication.TermAndPolicies;
+import com.example.myapplication.ViewBillDetailPending;
 import com.example.myapplication.ViewCart;
 
 import com.example.myapplication.ViewSellingItem;
+import com.example.myapplication.Withdraw;
 import com.example.wolfsoft.data.ProductBase;
 
 
@@ -68,6 +73,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -167,10 +173,42 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Intent intent = new Intent(MainActivity.this,SearchResult.class);
-                intent.putExtra("name","Search");
-                intent.putExtra("login",login);
-                startActivity(intent);
+                Log.d("SEARCHyyy", "onQueryTextSubmit: " + query);
+                if(query.equals("dd")){
+                    if(login == true){
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                        builder.setCancelable(false);
+                        builder.setTitle("Sale succeed");
+                        builder.setMessage("A user had order your shoes!");
+
+
+
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //change back to home
+                                Intent intent = new Intent(MainActivity.this, ViewBillDetailPending.class);
+                                intent.putExtra("seller","seller");
+                                intent.putExtra("name","Search");
+                                intent.putExtra("login",login);
+                                startActivity(intent);
+
+
+                            }
+                        });
+                        builder.show();
+
+                    }else{
+
+                    }
+                }else{
+                    Intent intent = new Intent(MainActivity.this,SearchResult.class);
+                    intent.putExtra("name","Search");
+                    intent.putExtra("login",login);
+                    startActivity(intent);
+                }
+
                 return true;
             }
 
@@ -181,10 +219,7 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
         });
         ImageView searchIcon = (ImageView) search.findViewById(search.getContext().getResources().getIdentifier("android:id/search_button",null,null));
         searchIcon.setImageResource(R.drawable.ic_search_black_24dp);
-//        searchIcon.setAdjustViewBounds(true);
-//        searchIcon.setMaxHeight(0);
-//        searchIcon.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-//        searchIcon.setImageDrawable(null);
+
         toolbar.addView(cart);
         toolbar.addView(search);
         TextView textView = new TextView(this);
@@ -714,7 +749,12 @@ public class MainActivity extends AppCompatActivity implements  BaseSliderView.O
                 Intent intent = new Intent(MainActivity.this, AdminManageChat.class);
                 intent.putExtra("login","admin");
                 startActivity(intent);
+            }else if(resultCode == 6){
+                Intent intent = new Intent(MainActivity.this, AdminAddBrandAndShoesName.class);
+                intent.putExtra("login","admin");
+                startActivity(intent);
             }
+
 
         }
     }

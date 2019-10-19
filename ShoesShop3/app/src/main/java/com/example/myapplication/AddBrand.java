@@ -2,8 +2,6 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,18 +28,26 @@ import com.tooltip.Tooltip;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class MyShoesEdit extends AppCompatActivity {
+public class AddBrand extends AppCompatActivity {
     private static final int pic_id = 123;
     private static  final int size_id = 1;
     private int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_shoes_edit);
         Intent intent = this.getIntent();
-        getSupportActionBar().setTitle("Shoes edit");
+        if(intent.getStringExtra("update") != null){
+            setContentView(R.layout.activity_update_brand);
+            getSupportActionBar().setTitle("Update brand");
+        }else{
+            setContentView(R.layout.activity_add_brand);
+            getSupportActionBar().setTitle("Add brand");
+        }
         camera_open_id = (ImageView)findViewById(R.id.camera_button);
         camera_open_id2 = (ImageView)findViewById(R.id.camera_button2);
+
+
+
 
         camera_open_id2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,37 +64,6 @@ public class MyShoesEdit extends AppCompatActivity {
                 startActivityForResult(photoPickerIntent, 10);
             }
         });
-
-        if (intent.getStringExtra("price") != null){
-
-
-            Log.d("CHECK23", "onCreate: " + intent.getStringExtra("price"));
-            String buyerAskPrice = intent.getStringExtra("price") ;
-
-            EditText yourBid =(EditText) findViewById(R.id.yourBid);
-            yourBid.setText("3000$");
-            ImageView imageView = (ImageView) findViewById(R.id.click_image);
-            imageView.setImageResource(R.drawable.shoe1);
-        }
-        Intent intent1 = this.getIntent();
-        FloatingActionButton fab = findViewById(R.id.fab);
-        final boolean login = intent1.getBooleanExtra("login" ,false);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (login == false){
-                    Intent intent = new Intent(MyShoesEdit.this, ChatActivity.class);
-
-                    startActivity(intent);
-                }else{
-                    Intent intent = new Intent(MyShoesEdit.this, ListProductChat.class);
-
-                    startActivity(intent);
-                }
-
-            }
-        });
-
         final ImageView help = findViewById(R.id.help);
         final Tooltip[] tooltip = {null};
         help.setOnClickListener(new View.OnClickListener() {
@@ -112,26 +87,19 @@ public class MyShoesEdit extends AppCompatActivity {
                 }
             }
         });
-        final LinearLayout imageViewer = findViewById(R.id.imageViewer);
-        click_image_id = new ImageView(this);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(150,150);
-        layoutParams.setMargins(0,0,0,0);
-        click_image_id.setLayoutParams(layoutParams);
-        click_image_id.setImageResource(R.drawable.item1);
-        ImageView imageView = findViewById(R.id.click_image);
-        imageView.setVisibility(View.GONE);
-        LinearLayout linearLayout = new LinearLayout(this);
-        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        linearLayout.addView(click_image_id);
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-        TextView remove = new TextView(this);
-        remove.setText("Remove");
-        remove.setTextColor(getResources().getColor(R.color.textred));
-        linearLayout.addView(remove);
-        imageViewer.addView(linearLayout);
+
+
+
 
     }
     public void click(View view){
+
+        if(view.getId() == R.id.confirm){
+            Toast.makeText(getBaseContext(),"Add successfully.",Toast.LENGTH_LONG).show();
+        }else if(view.getId() == R.id.cancel){
+            Toast.makeText(getBaseContext(),"Add brand cancel.",Toast.LENGTH_LONG).show();
+        }
+
         finish();
     }
     ImageView camera_open_id;
@@ -153,7 +121,7 @@ public class MyShoesEdit extends AppCompatActivity {
         if (requestCode == size_id){
             Button button = findViewById(R.id.sizeChoose);
             button.setText(data.getStringExtra("size"));
-
+            Toast.makeText(getBaseContext(),"You choose" + data.getStringExtra("size"),Toast.LENGTH_LONG).show();
 
 
         }
@@ -223,48 +191,4 @@ public class MyShoesEdit extends AppCompatActivity {
             }
         }
     }
-    public void editFinish(View view){
-        if(view.getId() == R.id.confirm){
-            setResult(20);
-            Toast.makeText(getBaseContext(),"Edit successfully, now please wait for admin.",Toast.LENGTH_LONG).show();
-        }else if(view.getId() == R.id.cancel){
-            Toast.makeText(getBaseContext(),"Edit shoes cancel.",Toast.LENGTH_LONG).show();
-        }else if(view.getId() == R.id.delete){
-            setResult(20);
-            Toast.makeText(getBaseContext(),"Shoes delete successfully.",Toast.LENGTH_LONG).show();
-        }
-
-        finish();
-
-    }
-
-    public void editDelete(final View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MyShoesEdit.this);
-
-        builder.setCancelable(true);
-        builder.setTitle("Delete");
-        builder.setMessage("Do you want to delete this sneaker?");
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                Toast.makeText(getBaseContext(),"Withdraw cancel.",Toast.LENGTH_LONG).show();
-            }
-        });
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //change back to home
-                Toast.makeText(getBaseContext(),"Deleted",Toast.LENGTH_SHORT).show();
-                editFinish(view);
-
-            }
-        });
-        builder.show();
-
-
-    }
-
 }

@@ -16,12 +16,14 @@ public class ViewBillDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final Intent intent1 = this.getIntent();
         if(intent1.getStringExtra("orders")!=null){
+            getSupportActionBar().setTitle("Order detail");
             setContentView(R.layout.activity_view_bill_detail_delivering);
         }else{
             setContentView(R.layout.activity_view_bill_detail_finish);
+            getSupportActionBar().setTitle("Order detail");
         }
 
-        getSupportActionBar().setTitle("Bill detail");
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         final boolean login = intent1.getBooleanExtra("login" ,false);
@@ -51,4 +53,5 @@ public class ViewBillDetail extends AppCompatActivity {
     public void finishSee(View view){
         finish();
     }
+
 }

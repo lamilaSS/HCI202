@@ -27,7 +27,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="200dp"
-                    android:text="My orders"
+                    android:text="Order Management"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"/>
 
@@ -101,14 +101,31 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="24dp"
 
-                android:src="@drawable/ic_shipping"
-                android:layout_height="24dp"/>
+            <ImageView
+                android:layout_width="14dp"
+
+                android:layout_height="13dp"
+                android:src="@drawable/ic_shipping" />
             <TextView
                 android:layout_width="wrap_content"
                 android:text="shipping"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="14dp"
+
+                android:layout_height="13dp"
+                android:src="@drawable/ic_processing" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="underchecking"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
@@ -120,68 +137,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:onClick="viewBill3"
-        >
 
-
-        <ImageView
-
-            android:layout_width="100dp"
-            android:layout_height="128dp"
-            android:layout_marginTop="0dp"
-            android:orientation="vertical"
-            android:src="@drawable/shoe1">
-
-        </ImageView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="128dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name1"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Nike Hyperdunk"
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/con1"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:text="Second-hand"
-
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/price1"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="20dp"
-                android:text="140$ - By Addy"
-                android:textSize="20dp"></TextView>
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="-104dp"
-                android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/ic_failed" />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 
     <LinearLayout
@@ -334,7 +290,7 @@
                 android:layout_height="128dp"
                 android:layout_marginTop="0dp"
                 android:orientation="vertical"
-                android:src="@drawable/item1">
+                android:src="@drawable/item5">
 
             </ImageView>
 
@@ -365,7 +321,7 @@
                 <ImageView
 
                     android:layout_width="30dp"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="right"
                     android:layout_marginTop="-45dp"
                     android:layout_marginRight="25dp"
@@ -384,7 +340,68 @@
             </LinearLayout>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:onClick="viewBill3"
+            >
 
+
+            <ImageView
+
+                android:layout_width="100dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:src="@drawable/shoe1">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Nike Hyperdunk"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:id="@+id/con1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Second-hand"
+
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:id="@+id/price1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="140$ - By Addy"
+                    android:textSize="20dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-104dp"
+                    android:layout_marginRight="25dp"
+                    app:srcCompat="@drawable/ic_failed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"

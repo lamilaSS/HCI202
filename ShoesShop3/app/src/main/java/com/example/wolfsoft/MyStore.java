@@ -1,24 +1,18 @@
 package com.example.wolfsoft;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.appcompat.widget.TooltipCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.ChatActivity;
 import com.example.myapplication.ListProductChat;
-import com.example.myapplication.MyShoesEdit;
-import com.example.myapplication.ViewBillDetailPending;
-import com.example.myapplication.ViewBillDetailProcessing;
-import com.example.myapplication.ViewBillDetailReject;
-import com.example.myapplication.ViewSellingItem;
+import com.example.myapplication.ShoesOnStock;
+import com.example.myapplication.ViewBillDetailPending2;
+import com.example.myapplication.ViewBillDetailProcessing2;
+import com.example.myapplication.ViewDetailReject2;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tooltip.Tooltip;
 
@@ -90,17 +84,29 @@ public class MyStore extends AppCompatActivity {
         startActivity(intent);
     }
     public void onClickView(View view){
-        Intent intent = new Intent(MyStore.this, MyShoesEdit.class);
-        Intent intent1 = this.getIntent();
+        if(view.getId() == R.id.waitingForUpdate){
+            Intent intent = new Intent(MyStore.this, ShoesOnStock.class);
+            Intent intent1 = this.getIntent();
 
-        final boolean login = intent1.getBooleanExtra("login" ,false);
-        intent.putExtra("login",login);
-        intent.putExtra("cart","cart");
-        startActivity(intent);
+            final boolean login = intent1.getBooleanExtra("login" ,false);
+            intent.putExtra("login",login);
+            intent.putExtra("cart","cart");
+            intent.putExtra("update","update");
+            startActivity(intent);
+        }else {
+            Intent intent = new Intent(MyStore.this, ShoesOnStock.class);
+            Intent intent1 = this.getIntent();
+
+            final boolean login = intent1.getBooleanExtra("login" ,false);
+            intent.putExtra("login",login);
+            intent.putExtra("cart","cart");
+            startActivity(intent);
+        }
+
     }
 
     public void showFailBill(View view) {
-        Intent intent = new Intent(MyStore.this, ViewBillDetailReject.class);
+        Intent intent = new Intent(MyStore.this, ViewDetailReject2.class);
         Intent intent1 = this.getIntent();
 
         final boolean login = intent1.getBooleanExtra("login" ,false);
@@ -109,7 +115,7 @@ public class MyStore extends AppCompatActivity {
         startActivity(intent);
     }
     public void showProcessingBill(View view) {
-        Intent intent = new Intent(MyStore.this, ViewBillDetailProcessing.class);
+        Intent intent = new Intent(MyStore.this, ViewBillDetailProcessing2.class);
         Intent intent1 = this.getIntent();
 
         final boolean login = intent1.getBooleanExtra("login" ,false);
@@ -119,12 +125,13 @@ public class MyStore extends AppCompatActivity {
     }
 
     public void showPendingBill(View view) {
-        Intent intent = new Intent(MyStore.this, ViewBillDetailPending.class);
+        Intent intent = new Intent(MyStore.this, ViewBillDetailPending2.class);
         Intent intent1 = this.getIntent();
 
         final boolean login = intent1.getBooleanExtra("login" ,false);
         intent.putExtra("login",login);
         intent.putExtra("cart","cart");
+        intent.putExtra("seller","seller");
         startActivity(intent);
     }
 }

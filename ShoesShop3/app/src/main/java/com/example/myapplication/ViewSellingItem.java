@@ -21,7 +21,7 @@ public class ViewSellingItem extends AppCompatActivity {
 
         intent = this.getIntent();
         String showMore = intent.getStringExtra("showMore");
-        getSupportActionBar().setTitle("List item");
+        getSupportActionBar().setTitle("Hyperdunk on sale");
         if (showMore != null){
             if(intent.getStringExtra("showMore").equals("showMore")){
                 setContentView(R.layout.activity_view_selling_item2);

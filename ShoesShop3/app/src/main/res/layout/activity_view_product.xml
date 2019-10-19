@@ -170,36 +170,7 @@
 
                 <!--*********Iphone price**********-->
 
-                <LinearLayout
 
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-                        android:id="@+id/condition1"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Condition"
-                        android:textColor="@color/colorSub"
-
-                        />
-
-                    <TextView
-                        android:id="@+id/condition2"
-                        android:layout_weight="0.5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="New with box"
-                        android:textColor="@color/colorTex"
-
-                        />
-                </LinearLayout>
 
                 <!--*********Brand**********-->
 
@@ -383,34 +354,7 @@
 
                     <!--*********Sim**********-->
 
-                    <LinearLayout
 
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:id="@+id/sim1"
-                            android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Size: "
-                            android:textColor="@color/colorSub"
-
-                            />
-
-                        <Button
-                            android:id="@+id/sizeChoose"
-                            android:layout_width="166dp"
-                            android:layout_height="50dp"
-                            android:backgroundTint="#54abee"
-                            android:text="size"
-                            android:textSize="14dp" />
-                    </LinearLayout>
 
 
 
@@ -461,33 +405,7 @@
 
                 <!--*********discription**********-->
 
-                <LinearLayout
 
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Rating"
-                        android:layout_height="wrap_content"/>
-                    <RatingBar
-
-                        android:id="@+id/rating1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:theme="@style/RatingBar"
-                        android:backgroundTint="#FFEB3B"
-                        android:numStars="5"
-
-                        android:stepSize="0.5"
-                        android:isIndicator="false" />
-
-                </LinearLayout>
 
                 <View
                     android:layout_marginTop="16dp"
@@ -803,13 +721,14 @@
                     <GridView
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:verticalSpacing="1dp"
+                        android:verticalSpacing="0dp"
                         android:stretchMode="columnWidth"
                         android:numColumns="2"
                         android:isScrollContainer="false"
-                        android:horizontalSpacing="1dp"
+                        android:horizontalSpacing="0dp"
                         android:id="@+id/gridview"
                         android:background="#808080"
+
                         />
 
                 </LinearLayout>

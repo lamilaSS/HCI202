@@ -95,41 +95,7 @@
                 android:textSize="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:background="@drawable/ic_local_phone_black_24dp"
-                    android:layout_height="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
 
-                android:text=" : 090978564321"
-                android:textColor="@color/colorTex"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:text="Email : phu123@gmail.ocm"
-                android:textColor="@color/colorTex"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/colorTex"
-                android:text="Address : 10/12 ASD street d.10 w.13"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"/>
             <TextView
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -145,40 +111,7 @@
                 android:textSize="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:background="@drawable/ic_local_phone_black_24dp"
-                    android:layout_height="30dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:text=" : 0909787878321"
-                    android:textColor="@color/colorTex"
-                    android:textSize="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:text="Email : phu@gmail.ocm"
-                android:textSize="20dp"
-                android:textColor="@color/colorTex"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:text="Address : 10/12 BDR street d.10 w.13"
-                android:textSize="20dp"
-                android:textColor="@color/colorTex"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"/>
+
             <TextView
 
                 android:layout_width="match_parent"

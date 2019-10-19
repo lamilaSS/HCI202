@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.AdminAddBrandAndShoesName">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="165dp"
+            android:onClick="shoesClick"
+            android:layout_height="50dp"
+            android:background="@drawable/ba"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shoesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:text="Shoes"
+
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/shoesNamedown"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/down2"
+                tools:layout_marginTop="-10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/ba"
+            android:layout_width="165dp"
+            android:onClick="brandClick"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/brandName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                android:text="Brand"
+
+                android:textSize="17dp" />
+            <ImageView
+                android:id="@+id/brandNamedown"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:srcCompat="@drawable/down2"
+                tools:layout_marginTop="-10dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/shoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:onClick="onClickItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/shoe1">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Hyberdunk"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Retail price: 200$"
+
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Type limited"
+                        android:textSize="20dp"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:onClick="onClickItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/shoes2">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Night hawk"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Retail price: 300$"
+
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+
+                        android:text="Type: unlimited"
+                        android:textSize="20dp"></TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="onClickItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/shoes1">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Hunter Z"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Retail price: 250 $"
+
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+
+                        android:text="Type : limited"
+                        android:textSize="20dp"></TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Add brand"
+                android:onClick="onClickItem2"
+                android:backgroundTint="#54abee"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+
+                app:backgroundTint="#54abee"
+                app:srcCompat="@android:drawable/ic_dialog_email">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/brand"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/addidas">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1980/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/puma_b">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1950/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/converse">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1970/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/nike">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1980/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/vans">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1985/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="onClickItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="128dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        android:src="@drawable/skechers">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Addidas"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="2000/9/9"
+
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="match_parent"
+                    android:text="Add brand"
+                    android:onClick="onClickItem4"
+                    android:backgroundTint="#54abee"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="@dimen/fab_margin"
+
+                    app:backgroundTint="#54abee"
+                    app:srcCompat="@android:drawable/ic_dialog_email">
+
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

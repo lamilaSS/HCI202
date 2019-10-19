@@ -5,91 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context="com.example.myapplication.AdminViewBill">
-    <ScrollView
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay2">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myStoreBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+
+            app:popupTheme="@style/AppTheme.PopupOverlay2" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="200dp"
+                    android:text="My orders"
+                    android:textAlignment="textStart"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="70dp"
+                    android:background="@drawable/ic_help_black_24dp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
             <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:orientation="horizontal"
-
-                >
-
-                <ImageView
-
-                    android:layout_width="100dp"
-                    android:layout_height="128dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="vertical"
-                    android:src="@drawable/shoe1">
-
-                </ImageView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="128dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/cond1"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Hyberdunk(New with box)"
-                        android:textSize="18dp"></TextView>
-
-                    <TextView
-                        android:id="@+id/size1"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:layout_marginLeft="10dp"
-                        android:text="Size: 38.5"
-
-                        android:textSize="20dp"></TextView>
-
-                    <TextView
-                        android:id="@+id/price1"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="178$ - By GGGGG"
-                        android:textSize="20dp"></TextView>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="150dp"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:textColor="@color/textred"
-                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/ic_passed"
+                    android:layout_height="24dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="View detail"
-                    android:textColor="#3F51B5"
-                    android:onClick="viewBill"
+                    android:layout_height="wrap_content"
+                    android:text="Agree" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/ic_failed"
+                    android:layout_height="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fail" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+
+                    android:src="@drawable/ic_pending"
+                    android:layout_height="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="pending"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="14dp"
+
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_shipping" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="shipping"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="14dp"
+
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_processing" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="underchecking"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-
+                android:onClick="viewBill"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -108,20 +163,20 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/cond2"
+                        android:id="@+id/newname"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="Nike Z(Second-hand)"
-                        android:textSize="18dp"></TextView>
+                        android:text="ABC Shoes"
+                        android:textSize="20dp"></TextView>
 
                     <TextView
-                        android:id="@+id/size2"
+                        android:id="@+id/con3"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
-                        android:text="Size: 41"
+                        android:text="New with box"
 
                         android:textSize="20dp"></TextView>
 
@@ -132,35 +187,37 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="20dp"
 
-                        android:text="165$ - By Someone"
+                        android:text="180$ - By Moon"
                         android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-110dp"
+                        android:layout_marginRight="50dp"
+                        app:srcCompat="@drawable/ic_passed" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginRight="15dp"
+                        app:srcCompat="@drawable/ic_shipping" />
+
+
                 </LinearLayout>
 
-
             </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="150dp"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:textColor="@color/textred"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="View detail"
-                    android:textColor="#3F51B5"
-                    android:onClick="viewBill"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <LinearLayout
 
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-
+                android:onClick="viewBill"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -169,7 +226,7 @@
                     android:layout_height="128dp"
                     android:layout_marginTop="0dp"
                     android:orientation="vertical"
-                    android:src="@drawable/shoes1">
+                    android:src="@drawable/item1">
 
                 </ImageView>
 
@@ -179,58 +236,52 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/cond3"
+                        android:id="@+id/newname12"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="Ultra(Second-hand)"
-                        android:textSize="18dp"></TextView>
-
-                    <TextView
-                        android:id="@+id/size3"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:layout_marginLeft="10dp"
-                        android:text="Size: 46"
-
+                        android:text="Some shoes"
                         android:textSize="20dp"></TextView>
 
                     <TextView
-                        android:id="@+id/price10"
+                        android:id="@+id/con5"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="-7dp"
 
-                        android:text="145$ - By Whom"
+                        android:text="New with box"
+                        android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-45dp"
+                        android:layout_marginRight="25dp"
+                        app:srcCompat="@drawable/ic_pending" />
+
+                    <TextView
+                        android:id="@+id/price5"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginBottom="20dp"
+                        android:text="130$ - By Teddy"
                         android:textSize="20dp"></TextView>
                 </LinearLayout>
 
+            </LinearLayout>
 
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="150dp"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:textColor="@color/textred"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="View detail"
-                    android:textColor="#3F51B5"
-                    android:onClick="viewBill"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-
+                android:onClick="viewBill"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -239,7 +290,7 @@
                     android:layout_height="128dp"
                     android:layout_marginTop="0dp"
                     android:orientation="vertical"
-                    android:src="@drawable/shoe2">
+                    android:src="@drawable/item5">
 
                 </ImageView>
 
@@ -249,60 +300,53 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/cond4"
+
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="Ultra2(Second-hand)"
-                        android:textSize="18dp"></TextView>
-
-                    <TextView
-                        android:id="@+id/size4"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:layout_marginLeft="10dp"
-                        android:text="Size: 41.5"
-
+                        android:text="Some shoes"
                         android:textSize="20dp"></TextView>
 
                     <TextView
-                        android:id="@+id/price4"
+                        android:id="@+id/con7"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="-7dp"
 
-                        android:text="122$ - By IS"
+                        android:text="New with box"
+                        android:textSize="20dp"></TextView>
+
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-45dp"
+                        android:layout_marginRight="25dp"
+                        app:srcCompat="@drawable/ic_processing" />
+
+                    <TextView
+                        android:id="@+id/price7"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginBottom="20dp"
+                        android:text="166$-By Loyld"
                         android:textSize="20dp"></TextView>
                 </LinearLayout>
 
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="150dp"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:textColor="@color/textred"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:onClick="viewBill"
-                    android:text="View detail"
-                    android:textColor="#3F51B5" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:onClick="viewBill"
+                >
 
-                android:orientation="horizontal">
 
                 <ImageView
 
@@ -320,52 +364,43 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/cond5"
+                        android:id="@+id/name1"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="Nie dunk(New with box)"
-                        android:textSize="18dp"></TextView>
+                        android:text="Nike Hyperdunk"
+                        android:textSize="20dp"></TextView>
 
                     <TextView
-                        android:id="@+id/size5"
+                        android:id="@+id/con1"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
-                        android:text="Size: 48"
+                        android:text="Second-hand"
 
                         android:textSize="20dp"></TextView>
 
                     <TextView
-                        android:id="@+id/price12"
+                        android:id="@+id/price1"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="20dp"
-
-                        android:text="200$ - By WoofWoff"
+                        android:text="140$ - By Addy"
                         android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-104dp"
+                        android:layout_marginRight="25dp"
+                        app:srcCompat="@drawable/ic_failed" />
+
                 </LinearLayout>
 
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="150dp"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:textColor="@color/textred"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="View detail"
-                    android:textColor="#3F51B5"
-                    android:onClick="viewBill"
-                    android:layout_height="wrap_content"/>
             </LinearLayout>
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -374,10 +409,9 @@
                 android:layout_gravity="bottom|end"
                 android:layout_margin="@dimen/fab_margin"
                 app:backgroundTint="#54abee"
-                app:srcCompat="@android:drawable/ic_dialog_email" >
+                app:srcCompat="@android:drawable/ic_dialog_email">
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
         </LinearLayout>
     </ScrollView>
 
